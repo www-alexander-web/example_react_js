@@ -1,0 +1,14 @@
+// @flow
+
+import type { ExtractReturn } from '@base/utils/utilitiesTypes';
+
+import {
+	{{camelCase name}}Action,
+	{{camelCase name}}SuccessAction,
+	{{camelCase name}}FailAction,
+} from '{{ routes }}/store/{{ properCase name}}/actions';
+
+export type {{ properCase name }}Actions =
+	| ExtractReturn<typeof {{camelCase name}}Action>
+	| ExtractReturn<typeof {{camelCase name}}SuccessAction>
+	| ExtractReturn<typeof {{camelCase name}}FailAction>;

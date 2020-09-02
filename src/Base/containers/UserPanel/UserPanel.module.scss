@@ -1,0 +1,9 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/_constants.scss';
+
+.user-panel {
+	&__sign-out-btn {
+		inline-size: 14rem;
+		margin-left: auto;
+	}
+}

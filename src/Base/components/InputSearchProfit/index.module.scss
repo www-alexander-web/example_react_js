@@ -1,0 +1,65 @@
+@import '~@base/assets/styles/constants';
+@import '~@base/assets/styles/mixins';
+@import '~@base/assets/styles/extenders';
+
+.profit-search {
+  display: flex;
+
+  &__input-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+  }
+
+  &__input {
+    @include input-search(1);
+    @extend %default-text-style;
+    outline: none;
+    box-sizing: border-box;
+    color: $text-gray-dark;
+    padding-left: 2rem;
+
+    &--labeled {
+      border-left: none;
+      border-radius: 0;
+      padding-left: 0.5rem;
+    }
+  }
+
+  &__label {
+    @include input-search;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 2rem;
+
+    &__text {
+      &:after {
+        content: ':';
+        margin-right: 0.25rem;
+      }
+    }
+  }
+
+  &__button {
+    z-index: 10;
+  }
+
+  &__menu {
+    position: absolute;
+    background: gray;
+    width: calc(100% + 1px);
+    box-sizing: border-box;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.05);
+    top: calc(#{$searchHeight} - #{$searchRadius});
+    background: white;
+    padding: 0.5rem;
+    border: {
+      width: 0 1px 1px 1px;
+      style: solid;
+      color: $input-search-border;
+		  radius: 0 0 $searchRadius $searchRadius;
+    }
+  }
+}

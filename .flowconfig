@@ -1,0 +1,31 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/.*
+!<PROJECT_ROOT>/node_modules/redux-persist/.*
+<PROJECT_ROOT>/build/.*
+<PROJECT_ROOT>/.storybook/*
+<PROJECT_ROOT>/generators/*
+<PROJECT_ROOT>/ci_cd/*
+[include]
+
+[declarations]
+<PROJECT_ROOT>/node_modules/redux-persist/.*
+
+[libs]
+flow-typed
+
+[lints]
+all=error
+
+[options]
+esproposal.optional_chaining=enable
+module.file_ext=.js
+module.file_ext=.jsx
+module.file_ext=.json
+module.file_ext=.css
+module.file_ext=.scsss
+module.name_mapper='^@starter' -> '<PROJECT_ROOT>/src/Starter'
+module.name_mapper='^@base' -> '<PROJECT_ROOT>/src/Base'
+module.name_mapper='^@mg' -> '<PROJECT_ROOT>/src/Monitoring'
+module.name_mapper='^@auth' -> '<PROJECT_ROOT>/src/Authorization'
+module.name_mapper.extension='scss' -> '<PROJECT_ROOT>/config/flow/CSSModule.js.flow'
+[strict]

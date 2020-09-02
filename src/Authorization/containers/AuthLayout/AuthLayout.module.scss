@@ -1,0 +1,43 @@
+@import '~@base/assets/styles/_colors.scss';
+@import '~@base/assets/styles/_constants.scss';
+
+.auth-layout {
+	align-items: center;
+	background-color: $auth-layout-background;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	position: relative;
+
+	@media screen and #{$mediaMobile} {
+		align-items: stretch;
+	}
+
+	&__header {
+		justify-content: center;
+		background-color: $auth-layout-logo-background;
+		display: none;
+		padding: 1.4rem 0;
+
+		@media screen and #{$mediaMobile} {
+			display: flex;
+			width: 100vw;
+		}
+	}
+
+	&__main {
+		background-color: $white;
+		box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+		display: flex;
+		min-height: 100%;
+
+		@media screen and #{$mediaMobile} {
+			flex: 1 1;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	/* TODO: Place your component styles here */
+}

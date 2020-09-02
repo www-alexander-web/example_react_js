@@ -1,0 +1,14 @@
+.segmented-control {
+	block-size: 4rem;
+	margin: {
+		block-start: 4rem;
+		block-end: 2rem;
+	}
+
+	&__text {
+		display: flex;
+		block-size: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+}

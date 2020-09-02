@@ -1,0 +1,8 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/mixins';
+
+.rest-profile-id {
+  &__active-text {
+    @include active-text;
+  }
+}

@@ -1,0 +1,19 @@
+// @flow
+
+import * as {{ camelCase name }}Types from '{{ routes }}/store/{{ properCase name}}/constants';
+
+export const {{camelCase name}}Action = () => ({
+type: {{camelCase name}}Types.{{ reducer }}_{{constantCase name}}_REQUEST,
+});
+
+export const {{camelCase name}}SuccessAction = (payload: boolean) => ({
+type: {{camelCase name}}Types.{{ reducer }}_{{constantCase name}}_SUCCESS,
+payload,
+});
+
+export const {{camelCase name}}FailAction = (payload: {| error: string |}) => ({
+type: {{camelCase name}}Types.{{ reducer }}_{{constantCase name}}_FAIL,
+payload,
+});
+
+export default null;

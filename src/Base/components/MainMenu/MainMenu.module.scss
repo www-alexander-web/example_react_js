@@ -1,0 +1,36 @@
+@import '~@base/assets/styles/colors';
+
+.main-menu {
+	&__title {
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		margin-left: 1rem;
+	}
+
+	&__list {
+		margin-bottom: 5rem;
+	}
+
+	&__icon {
+		border-radius: 4px;
+		font-size: 2rem;
+		margin-right: 15px;
+		padding: 7px 5px;
+	}
+
+	&__link {
+		align-items: center;
+		color: $text-link-second;
+		display: flex;
+		margin: 15px 0;
+		text-decoration: none;
+
+		&--active {
+			color: $text-link;
+
+			:first-child {
+				background-color: $primary-light;
+			}
+		}
+	}
+}

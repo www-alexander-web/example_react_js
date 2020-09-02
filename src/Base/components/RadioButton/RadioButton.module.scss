@@ -1,0 +1,79 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/constants';
+
+.radio-button {
+	background: $radio-button-background;
+	border-radius: 0.9rem;
+	padding: 0.2rem 0.2rem;
+	min-block-size: 3.6rem;
+	display: flex;
+	inline-size: max-content;
+	font-size: 1.3rem;
+	line-height: 1.8rem;
+
+	@media screen and #{$mediaMobile} {
+		inline-size: calc(100% - 0.4rem);
+	}
+
+	input {
+		display: none;
+		font: inherit;
+	}
+
+	&__item {
+		display: flex;
+		min-inline-size: 8rem;
+		inline-size: 100%;
+
+		@media screen and #{$mediaMobile} {
+			min-inline-size: 5rem;
+			inline-size: 100%;
+		}
+
+		& + ::before {
+			content: ' ';
+			transition: all 0.3s ease;
+			border: {
+				width: 0 1px 0 0;
+				style: solid;
+				color: $radio-button-disabled;
+			}
+
+			margin: 6px 0;
+		}
+
+		&--checked {
+			&::before {
+				border-color: transparent;
+			}
+
+			& + ::before {
+				border-color: transparent;
+			}
+		}
+	}
+
+	&__box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		cursor: pointer;
+		box-sizing: border-box;
+		flex: 1;
+		border: 1px solid transparent;
+		border-radius: 0.7rem;
+		transition: all 0.3s ease;
+		line-height: 1.1;
+
+		&--checked {
+			background: #fff;
+			border: 1px solid $radio-button-border;
+		}
+
+		&--disabled {
+			color: $radio-button-disabled;
+			cursor: not-allowed;
+		}
+	}
+}

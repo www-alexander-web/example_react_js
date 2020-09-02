@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Notification component should renders correctly type=error 1`] = `"<div class=\\"notification notification--them-error\\"></div>"`;
+
+exports[`The Notification component should renders correctly type=normal 1`] = `"<div class=\\"notification notification--them-normal\\"></div>"`;
+
+exports[`The Notification component should renders correctly type=success 1`] = `"<div class=\\"notification notification--them-success\\"></div>"`;

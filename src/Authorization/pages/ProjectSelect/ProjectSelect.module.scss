@@ -1,0 +1,176 @@
+@import '~@base/assets/styles/constants.scss';
+@import '~@base/assets/styles/colors';
+
+.project-select {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+
+	@media screen and #{$mediaMobile} {
+		max-width: 100vw;
+		padding-bottom: 2px;
+		width: 100vw;
+	}
+
+	&__header {
+		align-items: center;
+		box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+		display: flex;
+		justify-content: space-between;
+		padding: 2rem 2.5rem;
+		z-index: 1000;
+
+		@media screen and #{$mediaMobile}, #{$mediaMobileHeight} {
+			background-color: $gray-50;
+			inline-size: 100vw;
+			margin-bottom: 0;
+			padding: 1.4rem 0;
+			position: fixed;
+		}
+	}
+
+	&__link {
+		&:first-child {
+			display: none;
+		}
+
+		@media screen and #{$mediaMobile}, #{$mediaMobileHeight} {
+			position: absolute;
+			right: 1rem;
+		}
+	}
+
+	&__logo {
+		flex: 1;
+		height: 100%;
+		width: 100%;
+
+		@media screen and #{$mediaMobile}, #{$mediaMobileHeight} {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&__info {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+
+		@media screen and #{$mediaMobile}, #{$mediaMobileHeight} {
+			display: none;
+		}
+
+		&-avatar {
+			width: 3.2rem;
+			height: auto;
+			margin-right: 1.5rem;
+		}
+
+		@media screen and #{$mediaMobile} {
+			display: none;
+		}
+	}
+
+	&__user {
+		@media screen and #{$mediaMobile} {
+			display: none;
+		}
+	}
+
+	&__main {
+		align-items: center;
+		display: flex;
+		flex-grow: 1;
+
+		@media screen and #{$mediaMobile} {
+			padding-top: 13.8rem;
+			height: auto;
+			display: block;
+		}
+	}
+
+	&__inner {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		padding: 2rem 8.7rem 4rem 8.7rem;
+
+		@media screen and #{$mediaMobile} {
+			padding: 0 2rem;
+		}
+	}
+
+	&__title {
+		margin-bottom: 2rem;
+
+		@media screen and #{$mediaMobile} {
+			font-size: 3.4rem;
+			margin-bottom: 3rem;
+			text-align: center;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 2rem;
+
+		@media screen and #{$mediaMobile} {
+			font-size: 1.8rem;
+			text-align: center;
+			width: 86%;
+			margin: 0 auto 7rem;
+			line-height: 1.4;
+		}
+	}
+
+	&__cards {
+		align-items: flex-start;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		@media screen and #{$mediaMobile} {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		margin-left: 1.4rem;
+		margin-right: 1.4rem;
+		margin-top: 6rem;
+		position: relative;
+
+		@media screen and #{$mediaMobile} {
+			margin: 0 0 5rem;
+		}
+
+		&-img {
+			display: block;
+			margin-bottom: 3rem;
+			max-width: 100%;
+			height: auto;
+		}
+
+		&-title {
+			text-decoration: none;
+			align-self: center;
+		}
+	}
+
+	&__footer-mobile {
+		margin-block-start: auto;
+		display: none;
+
+		@media screen and #{$mediaMobile} {
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,42 @@
+@import '~@base/assets/styles/colors';
+
+@mixin link ($color) {
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.4rem;
+	line-height: 1.7rem;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	color: $color;
+}
+
+.bread-crumbs {
+	width: max-content;
+
+	&__box {
+		display: flex;
+	}
+
+	&__item {
+		padding-right: 0.5rem;
+
+		&:not(:last-child) {
+			::after {
+				padding-left: 0.5rem;
+				content: '>';
+			}
+		}
+	}
+
+	&__link {
+		@include link ($breed-crumbs-text);
+
+		&:hover {
+			color: $breed-crumbs-text-second;
+		}
+	}
+
+	&__link_first {
+		@include link ($breed-crumbs-text-second);
+	}
+}

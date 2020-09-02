@@ -1,0 +1,39 @@
+@import '~@base/assets/styles/constants';
+@import '~@base/assets/styles/extenders';
+
+.segmented-control {
+	margin: {
+		block-end: 3rem;
+	}
+
+	&__section {
+		@extend %form-section;
+	}
+
+	&__search {
+		grid-column: span 7;
+		max-inline-size: 100%;
+
+		@media screen and #{$mediaMobile} {
+			inline-size: 100%;
+			margin-inline-end: 0;
+			grid-column: initial;
+		}
+	}
+
+	&__radio {
+		grid-column: span 6;
+		inline-size: 40rem;
+		max-inline-size: 100%;
+
+		@media screen and #{$mediaMobile} {
+			inline-size: 100%;
+			margin-inline-end: 0;
+			grid-column: initial;
+		}
+	}
+
+	&__select {
+		@extend %form-item;
+	}
+}

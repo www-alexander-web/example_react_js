@@ -1,0 +1,178 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/constants';
+
+.button {
+	user-select: none;
+	background-color: unset;
+	background-image: none;
+	border-color: transparent;
+	border-style: solid;
+	border-radius: 4px;
+	border-width: 1px;
+	box-sizing: border-box;
+	cursor: pointer;
+	padding-block-start: 0.8rem;
+	padding-block-end: 0.8rem;
+	padding-inline-start: 2.8rem;
+	padding-inline-end: 2.8rem;
+
+	@media screen and #{$mediaMobile} {
+		max-inline-size: calc(100vw - 4rem);
+	}
+
+	&__content {
+		font-family: inherit;
+		font-style: normal;
+		font-weight: 600;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&[disabled] {
+		color: $text-disabled;
+		background-color: $button-bg-disabled;
+		border-color: $button-border-disabled;
+		pointer-events: none;
+	}
+
+	&--theme--default {
+		background-color: $button-bg-default;
+		border-color: $button-border-default;
+
+		&:hover {
+			color: $text-white;
+			background-color: $button-bg-default-hover;
+			border-color: $button-border-default-hover;
+		}
+	}
+
+	&--theme--primary {
+		color: $text-primary;
+		background-color: $button-bg-primary;
+		border-color: $button-border-primary;
+
+		&:hover {
+			color: $text-white;
+			background-color: $button-bg-primary-hover;
+			border-color: $button-border-primary-hover;
+		}
+	}
+
+	&--theme--secondary {
+		color: $text-white;
+		background-color: $button-bg-secondary;
+		border-color: $button-border-secondary;
+
+		&:hover {
+			background-color: $button-bg-secondary-hover;
+			border-color: $button-border-secondary-hover;
+		}
+	}
+
+	&--theme--link {
+		color: $text-link;
+		border: none;
+		font: inherit;
+		padding: 0;
+	}
+
+	&--theme--back {
+		background-color: $button-bg-default;
+		border-color: $button-border-default;
+		border-radius: 0.6rem;
+		color: $text-gray-dark;
+		padding-inline-start: 1.2rem;
+		padding-inline-end: 1.4rem;
+
+		&:hover {
+			color: $text-white;
+			background-color: $button-bg-default-hover;
+			border-color: $button-border-default-hover;
+		}
+	}
+
+	&--theme--download {
+		color: $text-primary;
+		background-color: $button-bg-primary;
+		border-color: $button-border-primary;
+		border-radius: 0.9rem;
+		padding-inline-start: 2rem;
+		block-size: 4rem;
+
+		& > i {
+			font-size: 1.8rem;
+			margin-inline-end: 1rem;
+		}
+
+		&:hover {
+			color: $text-white;
+			background-color: $button-bg-primary-hover;
+			border-color: $button-border-primary-hover;
+		}
+
+		@media screen and #{$mediaMobile} {
+			padding: 1rem;
+		}
+	}
+
+	&--theme--icon {
+		inline-size: 6rem;
+		padding: 0;
+		color: $gray-500;
+		transition: all 0.3s ease;
+
+		& i::before {
+			font-size: 2.2rem;
+		}
+
+		&:hover {
+			color: $text-primary;
+		}
+	}
+
+	&--theme--start-bot {
+		background-color: $button-bg-default;
+		border-color: $button-border-default;
+		color: $text-gray-dark;
+		font-weight: 500;
+
+		&:hover {
+			color: $text-white;
+			background-color: $button-bg-default-hover;
+			border-color: $button-border-default-hover;
+		}
+	}
+
+	&--fluid {
+		inline-size: 100%;
+		display: block;
+	}
+
+	&--size--medium {
+		min-block-size: 2.6em;
+
+		.button__content {
+			font-size: 1.5rem;
+		}
+	}
+
+	&--size--small {
+		.button__content {
+			font-size: 1.4rem;
+		}
+	}
+
+	&--size--large {
+		min-block-size: 3.3em;
+
+		.button__content {
+			font-size: 1.5rem;
+		}
+	}
+
+	&--size--text {
+		min-block-size: 1.2 * 1rem;
+	}
+}

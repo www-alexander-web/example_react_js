@@ -1,0 +1,92 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/extenders';
+
+.pagination {
+	.pagination_desktop {
+		display: flex;
+		@media screen and #{$mediaMobile} {
+			display: none;
+		}
+	}
+
+	.pagination_mobile {
+		display: none;
+		@media screen and #{$mediaMobile} {
+			display: flex;
+		}
+	}
+
+	.general {
+		font-size: 1.4rem;
+		padding-inline-start: 1rem;
+		padding-inline-end: 1rem;
+		outline: none;
+		transition: all 0.3s ease;
+	}
+
+	&__ellipsis {
+		@extend .general;
+
+		display: flex;
+		align-items: center;
+		width: auto;
+		color: $pagination-text;
+	}
+
+	&__button {
+		@extend %default-button;
+		@extend .general;
+
+		border-radius: 6px;
+		color: $pagination-text;
+		margin-left: 0.5rem;
+		min-inline-size: 3rem;
+		min-block-size: 3rem;
+
+		&--active,
+		&:hover,
+		&:focus {
+			border-color: $pagination-border-active;
+			background-color: $pagination-border-active;
+			color: $pagination-text-active;
+		}
+
+		&--active {
+			background-color: $pagination-background-active;
+
+			&:hover,
+			&:focus {
+				background-color: $pagination-background-active;
+			}
+		}
+	}
+
+	&__backward_or_forward {
+		@extend %default-button;
+		@extend .general;
+
+		border-radius: 6px;
+		min-inline-size: 3rem;
+		min-block-size: 3rem;
+		color: $pagination_text_backward_or_forward;
+		margin-left: 10px;
+		margin-right: 10px;
+		@media screen and #{$mediaMobile} {
+			margin: 0;
+		}
+		&--active,
+		&:hover {
+			border-color: $pagination-border-active;
+			background-color: $pagination-border-active;
+			color: $pagination-text-active;
+		}
+
+		&--active {
+			background-color: $pagination-background-active;
+
+			&:hover {
+				background-color: $pagination-background-active;
+			}
+		}
+	}
+}

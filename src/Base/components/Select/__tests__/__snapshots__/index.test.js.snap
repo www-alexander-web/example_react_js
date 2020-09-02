@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Select component should renders correctly 1`] = `"<div class=\\"select\\"><div class=\\"select__field\\" tabindex=\\"-1\\" role=\\"button\\"><label for=\\"test1\\" class=\\"select__text\\" title=\\"select..\\">select..</label><div class=\\"select__icon\\"><i class=\\"icon-down-open\\"></i></div><input type=\\"text\\" id=\\"test1\\" name=\\"test1\\" value=\\"\\" disabled=\\"\\"/></div><div class=\\"select__box\\"></div></div>"`;
+
+exports[`The Select component should renders correctly disabled 1`] = `"<div class=\\"select\\"><div class=\\"select__field select__field--disabled\\" tabindex=\\"-1\\" role=\\"button\\"><label for=\\"test2\\" class=\\"select__text\\" title=\\"select..\\">select..</label><div class=\\"select__icon\\"><i class=\\"icon-down-open\\"></i></div><input type=\\"text\\" id=\\"test2\\" name=\\"test2\\" value=\\"\\" disabled=\\"\\"/></div><div class=\\"select__box\\"></div></div>"`;
+
+exports[`The Select component should renders correctly with options 1`] = `"<div class=\\"select\\"><div class=\\"select__field\\" tabindex=\\"-1\\" role=\\"button\\"><label for=\\"test3\\" class=\\"select__text\\" title=\\"select..\\">select..</label><div class=\\"select__icon\\"><i class=\\"icon-down-open\\"></i></div><input type=\\"text\\" id=\\"test3\\" name=\\"test3\\" value=\\"\\" disabled=\\"\\"/></div><div class=\\"select__box\\"></div></div>"`;

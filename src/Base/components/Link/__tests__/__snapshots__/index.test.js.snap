@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Link component should render react-router-dom Link component 1`] = `"<a class=\\"link\\" href=\\"/home\\">Link</a>"`;
+
+exports[`The Link component should renders correctly 1`] = `"<a href=\\"http://google.com\\" class=\\"link\\">Link</a>"`;

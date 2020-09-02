@@ -1,0 +1,17 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/extenders';
+
+.link {
+	@extend %default-text-style;
+
+	color: $text-link;
+	text-decoration: none;
+
+	&--underlined {
+		& > * {
+			border-bottom-color: inherit;
+			border-bottom-width: 1px;
+			border-bottom-style: solid;
+		}
+	}
+}

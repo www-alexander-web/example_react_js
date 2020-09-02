@@ -1,0 +1,123 @@
+//$primary: #2fabe1;
+$primary: #686868;
+//$primary-dark: #1587b8;
+$primary-dark: #929292;
+//$primary-light: #c8eeff;
+$primary-light: #efefef;
+$danger: #de0e0e;
+
+$white: #fff !default;
+$gray-50: #f5f6f8;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-530: #a6adc4 !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$button-bg-default: $white;
+$button-bg-default-hover: $primary;
+
+$button-border-default: #dcdcdc;
+$button-border-default-hover: $primary;
+
+$button-bg-primary: $white;
+$button-bg-primary-hover: $primary;
+
+$button-border-primary: $primary;
+$button-border-primary-hover: $primary;
+
+$button-bg-secondary: $primary;
+$button-bg-secondary-hover: $primary-dark;
+
+$button-border-secondary: $primary;
+$button-border-secondary-hover: $primary-dark;
+
+$button-bg-disabled: $gray-200;
+$button-border-disabled: $gray-200;
+
+$input-border: #dee0e4;
+$input-second-text-color: #a6adc4;
+
+$input-search-border: $gray-500;
+
+$checkbox-border: #dee0e4;
+$checkbox-fill: $primary;
+$checkbox-text-color: #a6adc4;
+$checkbox-secondary-background: #cdf0fd33;
+
+$text-white: $white;
+$text-primary: $primary;
+$text-disabled: $gray-600;
+$text-gray: #a6adc4;
+$text-gray-light: #a1a8b4;
+$text-gray-dark: #293956;
+$text-black: #000;
+
+$text-link: $primary;
+$text-link-second: #a7abc2;
+
+$text-label-red: #ff647c;
+$text-label-yellow: #ffa26b;
+$text-label-green: #00c48c;
+
+$layout-aside-background: $gray-50;
+
+$auth-layout-background: #e5e5e5;
+$auth-layout-logo-background: $gray-50;
+
+$tabs-primary: $gray-600;
+$tabs-border-default: #6c757d00;
+$tabs-select-primary: $primary-dark;
+$tabs-active: $black;
+$tabs-border: $gray-400;
+
+$breed-crumbs-text: $gray-500;
+$breed-crumbs-text-second: $gray-900;
+
+$radio-button-background: $gray-200;
+$radio-button-background-checked: $white;
+$radio-button-disabled: #0000007c;
+$radio-button-border: #0000000a;
+$radio-button-box-shadow: #0000001f;
+$radio-button-zero: #0000;
+
+$switcher-background: $gray-400;
+$switcher-background-active: $primary;
+$switcher-slider: $white;
+
+$select-border: $gray-400;
+$select-border-error: $danger;
+$select-focus: $gray-800;
+$select-disabled: $gray-500;
+$select-background-disabled: #8080801a;
+$select-menu-background: $white;
+$select-menu-background-active: $gray-300;
+
+$table-head: $gray-600;
+$table-text: $gray-800;
+$table-border: #dee0e4;
+$table-background: #0000;
+$table-text-active: $white;
+$table-border-active: $primary-dark;
+//$table-background-active: $primary;
+$table-background-active: #e6f8ff;
+
+$date-picker-border: $gray-400;
+$date-picker-primary: $primary;
+
+$pagination-border: $gray-400;
+$pagination-background: $gray-100;
+$pagination-text: $gray-900;
+$pagination_text_backward_or_forward: $gray-530;
+$pagination-background-active: $primary;
+$pagination-border-active: $primary-dark;
+$pagination-text-active: $white;
+
+$button-update-success: rgba(39, 174, 95, 0.8);
+$button-update-success-border: rgb(39, 174, 96);

@@ -1,0 +1,16 @@
+@import '~@base/assets/styles/constants';
+
+.search-button {
+    height: $searchHeight;
+    border: {
+        radius: 0 6px 6px 0;
+    }
+
+    i {
+        font-size: 2.5rem;
+
+        &::before {
+            transform: translate3d(0, -0.3rem, 0);
+        }
+    }
+}

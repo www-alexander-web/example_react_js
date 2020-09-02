@@ -1,0 +1,11 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/constants';
+@import '~@base/assets/styles/mixins';
+
+.input-search {
+	display: flex;
+
+	&__input {
+		@include input-search(1);
+	}
+}

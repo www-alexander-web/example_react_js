@@ -1,0 +1,148 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/extenders';
+@import '~@base/assets/styles/constants';
+
+.footer {
+	display: grid;
+	grid-row-gap: 1.2rem;
+	grid-template-areas:
+		'a . . . . .'
+		'b c d e f .'
+		'g g h h . i'
+		'j j j j k k'
+		'l m m m m m';
+
+	& > * {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		block-size: 100%;
+	}
+
+	&__button {
+		@extend %default-button;
+
+		cursor: pointer;
+		outline: none;
+
+		svg {
+			//fill: $text-gray;
+			fill: $text-label-green;
+			transition: all 0.3s ease;
+		}
+
+		&:hover {
+			svg {
+				fill: black;
+			}
+		}
+	}
+
+	&__a {
+		grid-area: a;
+	}
+
+	&__b {
+		grid-area: b;
+	}
+
+	&__c {
+		grid-area: c;
+	}
+
+	&__d {
+		grid-area: d;
+	}
+
+	&__e {
+		grid-area: e;
+	}
+
+	&__f {
+		grid-area: f;
+	}
+
+	&__g {
+		grid-area: g;
+	}
+
+	&__h {
+		grid-area: h;
+	}
+
+	&__i {
+		grid-area: i;
+	}
+
+	&__j {
+		grid-area: j;
+	}
+
+	&__k {
+		grid-area: k;
+	}
+
+	&__l {
+		grid-area: l;
+	}
+
+	&__m {
+		grid-area: m;
+	}
+
+	&__n {
+		grid-area: n;
+		display: none;
+	}
+
+	@media screen and #{$mediaMobile}, #{$mediaMobileHeight} {
+		inline-size: 100%;
+		padding-inline-start: auto;
+		padding-inline-end: auto;
+		padding-block-start: 3rem;
+		padding-block-end: 3rem;
+		background-color: #f5f6f8;
+		grid-row-gap: 2rem;
+		grid-template-columns: 1fr auto auto auto auto auto 1fr;
+		grid-template-areas:
+			'. n n n n n .'
+			'. b c d e f .'
+			'. . j j j . .';
+
+		& > * {
+			justify-content: center;
+		}
+
+		&__a {
+			display: none;
+		}
+
+		&__g {
+			display: none;
+		}
+
+		&__h {
+			display: none;
+		}
+
+		&__i {
+			display: none;
+		}
+
+		&__k {
+			display: none;
+		}
+
+		&__l {
+			display: none;
+		}
+
+		&__m {
+			display: none;
+		}
+
+		&__n {
+			display: flex;
+		}
+	}
+}

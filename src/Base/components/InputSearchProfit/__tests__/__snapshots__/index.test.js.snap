@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The InputSearchProfit component should renders correctly 1`] = `"<div class=\\"profit-search\\"><div class=\\"profit-search__input-wrapper\\"><input name=\\"name\\" value=\\"value\\" class=\\"profit-search__input\\"/></div><button type=\\"button\\" class=\\"button button--theme--secondary button--size--medium search-button profit-search__button\\"><span class=\\"button__content\\"><i class=\\"icon-icon\\"></i></span></button></div>"`;

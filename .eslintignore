@@ -1,0 +1,10 @@
+src/serviceWorker.js
+flow-typed/
+generators/
+public/
+config/
+ci_cd/
+.storybook/
+
+// config files
+*.config.js

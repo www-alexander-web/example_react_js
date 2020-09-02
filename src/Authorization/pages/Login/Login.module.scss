@@ -1,0 +1,89 @@
+@import '~@base/assets/styles/constants.scss';
+
+.login {
+	display: flex;
+	flex-direction: column;
+	padding: 7.5rem 9.5rem;
+	transition: all 0.3s ease;
+
+	@media screen and #{$mediaHeight} {
+		padding: 2rem 4rem;
+		block-size: calc(100vh - 8rem);
+		min-block-size: 38rem;
+	}
+
+	@media screen and #{$mediaTable} {
+		padding: 7.5rem 4.5rem;
+	}
+
+	@media screen and #{$mediaMobile} {
+		// TODO: replace by breakpoin
+		flex: 1 1;
+		padding: 0;
+		height: calc(100vh - 34px - 2.8rem);
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__logo {
+		align-self: center;
+	}
+
+	&__header {
+		margin: 2.5rem 0 2rem;
+
+		@media screen and #{$mediaHeight} {
+			margin: 0;
+			flex: 0.3 0.3;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+		}
+
+		@media screen and #{$mediaMobile} {
+			margin: 0;
+			flex: 0.5 0.5;
+			align-items: center;
+			display: flex;
+			z-index: 1;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		inline-size: 40rem;
+
+		@media screen and #{$mediaHeight} {
+			flex: 1 1;
+		}
+
+		@media screen and #{$mediaMobile} {
+			inline-size: 100vw;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__form-input {
+		margin-block-start: 3.5rem;
+
+		@media screen and #{$mediaHeight} {
+			margin-block-start: auto;
+		}
+
+		@media screen and #{$mediaMobile} {
+			inline-size: calc(100% - 4rem);
+		}
+	}
+
+	&__form-button {
+		margin-top: 2.5rem;
+
+		@media screen and #{$mediaHeight} {
+			margin-block-start: auto;
+		}
+	}
+
+	/* TODO: Place your component styles here */
+}

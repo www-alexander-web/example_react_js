@@ -1,0 +1,23 @@
+$mediaSmallMobile: '(max-width: 361px)';
+$mediaMobile: '(max-width: 500px)';
+$mediaMobileHeight: '(max-width: 823px) and (max-height: 414px)';
+$mediaTable: '(max-width: 1100px)';
+$mediaMedium: '(min-width: 501px) and (max-width: 992px)';
+$mediaHeight: '(min-width: 500px) and (max-height: 700px)';
+$mediaMiddle: '(min-width: 501px) and (max-width: 1120px)';
+$searchInlineSize: 40rem;
+$addNewProfileRatio: 1.3fr 1fr;
+$searchHeight: 4rem;
+$searchRadius: 6px;
+
+@mixin forTablet {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin forPhone {
+  @media screen and #{$mediaMobile}  {
+    @content;
+  }
+}

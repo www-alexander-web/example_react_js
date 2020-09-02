@@ -1,0 +1,26 @@
+.item-wrapper {
+    display: flex;
+}
+
+.item {
+    flex: 1;
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 1.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: left;
+    outline: none;
+
+    &--focused {
+        background: #F3FBFF;
+    }
+
+    &__search-type {
+        &:after {
+            content: ':';
+            margin-right: 0.25rem;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+// @flow
+
+import {
+put,
+takeLeading,
+} from 'redux-saga/effects';
+import type { Saga } from 'redux-saga';
+
+import {
+{{camelCase name}}SuccessAction,
+{{camelCase name}}FailAction,
+} from '{{ routes }}/store/{{ properCase name}}/actions';
+import {
+{{ reducer }}_{{constantCase name}}_REQUEST,
+} from '{{ routes }}/store/{{ properCase name}}/constants';
+
+function* {{ camelCase name}}Saga(): Saga<void> {
+	try {
+	const isOk = true;
+	if (isOk) {
+	yield put({{camelCase name}}SuccessAction(isOk));
+	} else if (
+	isOk.error !== null
+	&& isOk.error !== undefined
+	&& isOk.error !== ''
+	) {
+	throw new Error(isOk.error);
+	} else {
+	throw new Error('Unknown error');
+	}
+	} catch (err) {
+	yield put({{camelCase name}}FailAction({ error: err.message }));
+	}
+	}
+
+
+	export default function* watch{{properCase name}}(): Saga<void> {
+		yield takeLeading({{ reducer }}_{{constantCase name}}_REQUEST, {{ camelCase name}}Saga);
+		}

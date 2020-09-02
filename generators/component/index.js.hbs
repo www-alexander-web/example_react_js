@@ -1,0 +1,24 @@
+// @flow
+
+import React from 'react';
+import cx from 'classnames';
+
+import styles from './{{ properCase name }}.module.scss';
+
+type {{ properCase name }}Props = {
+	className: string,
+}
+
+const {{ properCase name }} = ({ 
+	className,
+}: {{ properCase name }}Props) => (
+<div className={cx(styles['{{ kebabCase name }}'], className)}>
+    Hello World!
+</div>
+);
+
+{{ properCase name }}.defaultProps = {
+	className: '',
+};
+
+export default {{ properCase name }};

@@ -1,0 +1,89 @@
+@import '_constants';
+@import '_colors';
+
+@mixin mobile-navigation {
+	display: none;
+
+	@media screen and #{$mediaMobile} {
+		line-height: 3rem;
+		padding-bottom: 3rem;
+		display: flex;
+	}
+}
+
+@mixin mobile-title {
+	@media screen and #{$mediaMobile} {
+		display: block;
+		text-align: center;
+		font-size: 3rem;
+		margin-block-end: 1.4rem;
+	}
+}
+
+@mixin profile-hr {
+	border: 0;
+	height: 0.1rem;
+	padding: 0;
+	margin: 0.75rem 0;
+	background: $input-border;
+
+	@media screen and #{$mediaMobile} {
+		display: none;
+	}
+}
+
+@mixin profile-button {
+	align-self: flex-end;
+	justify-self: flex-end;
+	block-size: 4rem;
+	min-inline-size: 18rem;
+
+	@media screen and #{$mediaMobile}, #{$mediaMobileHeight} {
+		justify-self: auto;
+		align-self: auto;
+		margin-top: 2rem;
+	}
+}
+
+@mixin profile-box($margin-top) {
+	display: grid;
+	grid-auto-rows: max-content;
+	grid-row-gap: 2rem;
+	margin-top: $margin-top;
+
+	@media screen and #{$mediaMedium} {
+		margin-top: 0;
+	}
+
+	@media screen and #{$mediaMobile} {
+		margin-top: 3rem;
+	}
+}
+
+@mixin input-search($flex: none) {
+	border: {
+		width: 1px 0 1px 1px;
+		style: solid;
+		color: $input-search-border;
+		radius: $searchRadius 0 0 $searchRadius;
+	}
+
+	height: $searchHeight;
+	flex: $flex;
+	margin: 0;
+}
+
+@mixin required {
+	&::after {
+		content: '*';
+		margin-left: 0.25rem;
+		color: $danger;
+	}
+}
+
+@mixin active-text {
+	display: inline-block;
+	color: $primary;
+	font-weight: 600;
+	cursor: pointer;
+}

@@ -1,0 +1,35 @@
+// @flow
+
+import React from 'react';
+import { connect } from 'react-redux';
+
+import styles from '{{ routes }}/pages/{{ properCase name}}/{{ properCase name }}.module.scss';
+
+type OwnProps = {||};
+
+type {{ properCase name }}Props = {|
+	...OwnProps,
+|};
+
+// eslint-disable-next-line no-empty-pattern
+export const {{ properCase name }} = ({
+}: {{ properCase name }}Props) => (
+	<div className={styles['{{ kebabCase name }}']}>
+			Hello World!
+	</div>
+);
+
+// eslint-disable-next-line no-unused-vars
+const mapStateToProps = (state: {}) => ({
+
+});
+
+// eslint-disable-next-line no-unused-vars
+const mapDispatchToProps = (dispatch) => ({
+
+});
+
+export default connect<_, OwnProps, _, _, _, _>(
+	mapStateToProps,
+	mapDispatchToProps
+)({{ properCase name }});

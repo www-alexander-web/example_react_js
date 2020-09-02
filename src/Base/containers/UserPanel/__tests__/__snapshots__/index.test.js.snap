@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Header component expect renders correctly 1`] = `"<button type=\\"button\\" class=\\"button button--theme--primary button--size--small user-panel__sign-out-btn\\"><span class=\\"button__content\\">Log Out</span></button>"`;

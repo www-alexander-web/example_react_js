@@ -1,0 +1,43 @@
+@import '~@base/assets/styles/constants';
+@import '~@base/assets/styles/extenders';
+
+.segmented-control {
+	@extend %form-section;
+
+	block-size: 4rem;
+	margin: {
+		block-start: 4rem;
+		block-end: 2rem;
+	}
+
+	&__text {
+		grid-column: span 2;
+		display: flex;
+		block-size: 100%;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__radio {
+		grid-column: span 6;
+		inline-size: 70rem;
+		max-inline-size: 100%;
+	}
+}
+
+@include forTablet {
+	.segmented-control {
+		margin-block-end: 1rem;
+		block-size: auto;
+	}
+}
+
+@include forPhone {
+	.segmented-control {
+		margin-block-start: 2rem;
+	}
+
+	.radioButton {
+		font-size: 10px;
+	}
+}

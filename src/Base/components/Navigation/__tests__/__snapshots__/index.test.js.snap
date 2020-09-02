@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Navigation component should renders correctly 1`] = `"<div class=\\"navigation\\"><nav class=\\"bread-crumbs navigation__links\\"><ul class=\\"bread-crumbs__box\\"></ul></nav></div>"`;

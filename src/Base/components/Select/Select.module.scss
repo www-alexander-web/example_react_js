@@ -1,0 +1,144 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/extenders';
+
+.select {
+	&__icon {
+		margin-inline-start: auto;
+		font-size: 1.6rem;
+		color: $select-border;
+		transition: all 0.3s ease;
+	}
+
+	&__text {
+		cursor: pointer;
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__field {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		border: 0.1rem solid $select-border;
+		border-radius: 6px;
+		padding-inline-start: 2rem;
+		padding-inline-end: 1rem;
+		block-size: 3.8rem;
+		max-inline-size: 100%;
+		user-select: none;
+		transition: all 0.3s ease;
+
+		&--open {
+			.select__icon {
+				color: $select-border;
+			}
+		}
+
+		&--open,
+		&:hover,
+		&:focus {
+			border-color: $select-focus;
+			outline: none;
+		}
+
+		> input {
+			display: none;
+		}
+
+		&--disabled {
+			background-color: $select-background-disabled;
+			color: $select-disabled;
+			cursor: not-allowed;
+
+			.select__icon {
+				color: $select-border;
+			}
+
+			&:hover,
+			&:focus {
+				border-color: $select-border;
+
+				.select__icon {
+					color: $select-border;
+				}
+			}
+		}
+
+		&:hover,
+		&:focus {
+			.select__icon {
+				color: $select-focus;
+			}
+		}
+	}
+
+	&__box {
+		position: relative;
+		inline-size: 100%;
+	}
+
+	&__container {
+		position: absolute;
+		z-index: 100;
+		inline-size: 100%;
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__menu {
+		background-color: $select-menu-background;
+		border-radius: 6px;
+		overflow-x: hidden;
+		border: 1px solid $select-border;
+	}
+
+	&__element {
+		@extend %default-button;
+
+		font-size: 1.4rem;
+		user-select: none;
+		inline-size: 100%;
+		align-items: center;
+		min-block-size: 3rem;
+		text-align: left;
+		transition: all 0.3s ease;
+		padding: 1rem 1rem 1rem 2rem;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		&:hover,
+		&:focus,
+		&--active {
+			background-color: $select-menu-background-active;
+			outline: none;
+		}
+
+		&--disabled {
+			cursor: not-allowed;
+			color: $select-disabled;
+
+			&:hover,
+			&:focus {
+				background-color: unset;
+			}
+		}
+	}
+
+	&__item {
+		border-block-end: 1px solid $select-border;
+
+		&:last-child {
+			border-block-end: 0;
+		}
+	}
+
+	&__error {
+		border: 0.1rem solid $select-border-error;
+	}
+}

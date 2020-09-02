@@ -1,0 +1,94 @@
+@import '~@base/assets/styles/constants';
+
+%default-text-style {
+	font-size: 1.4rem;
+	font-weight: 500;
+	line-height: 1.2;
+}
+
+%default-button {
+	background-color: unset;
+	background-image: none;
+	border-color: transparent;
+	border-style: solid;
+	border-radius: 0;
+	border-width: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-family: inherit;
+	font-style: normal;
+	font-weight: inherit;
+	padding: 0;
+}
+
+%form-section {
+	display: flex;
+	flex-wrap: wrap;
+	inline-size: 100%;
+	max-inline-size: 100%;
+	padding-block-start: 1rem;
+
+	& > * {
+		margin-inline-end: 1rem;
+		margin-block-end: 1.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-direction: column;
+
+		& > * {
+			inline-size: 100%;
+			margin-inline-end: auto;
+
+			&:nth-child(2) {
+				margin-block-start: 0.5rem;
+			}
+		}
+	}
+
+	@supports (display: grid) {
+		flex-wrap: initial;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(6rem, max-content));
+		grid-auto-rows: max-content;
+		grid-column-gap: 1rem;
+		grid-row-gap: 2rem;
+
+		@media screen and #{$mediaMobile} {
+			grid-template-columns: 1fr;
+		}
+
+		& > * {
+			margin: 0;
+		}
+	}
+}
+
+%form-item {
+	inline-size: 22rem;
+	max-inline-size: 100%;
+	grid-column: span 2;
+
+	& > span {
+		white-space: nowrap;
+	}
+
+	@media screen and #{$mediaMobile} {
+		inline-size: 100%;
+		grid-column: initial;
+	}
+}
+
+%form-button {
+	grid-column: span 2;
+	margin-inline-end: auto;
+
+	& > button {
+		inline-size: max-content;
+	}
+
+	@media screen and #{$mediaMobile} {
+		grid-column: initial;
+		inline-size: 100%;
+	}
+}

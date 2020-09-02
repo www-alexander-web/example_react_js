@@ -1,0 +1,254 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/constants.scss';
+
+.main-layout {
+	display: flex;
+	min-block-size: 100vh;
+	max-inline-size: 100vw;
+
+	@media screen and #{$mediaMobile} {
+		flex-direction: column;
+	}
+
+	&__header-logo {
+		display: none;
+
+		@media screen and #{$mediaMobile} {
+			position: fixed;
+			display: flex;
+			block-size: 6rem;
+			inline-size: 100vw;
+			align-items: center;
+			justify-content: space-between;
+			background: #f5f6f8;
+			z-index: 1000;
+			border-block-end: 0.2rem solid rgba(0, 0, 0, 0.15);
+			transition: all 0.3s ease;
+			transform: translate3d(0, 0, 0);
+
+			&--down {
+				transform: translate3d(0, -6.2rem, 0);
+			}
+		}
+	}
+
+	&__logo-link {
+		height: 100%;
+		width: 100%;
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__logo-button {
+		height: 100%;
+		flex: 0.5;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__aside {
+		background-color: $layout-aside-background;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		padding: 2.6rem 2rem 2rem 4.2rem;
+		width: 27.5rem;
+
+		@media screen and #{$mediaTable} {
+			position: fixed;
+			top: 7.5rem;
+			transform: translate3d(-27.5rem, 0, 0);
+			block-size: calc(100vh - 7.5rem);
+			z-index: 1000;
+			transition: all 0.3s ease;
+		}
+
+		&--open {
+			@media screen and #{$mediaTable} {
+				transform: translate3d(0, 0, 0);
+				overflow-x: auto;
+				width: auto;
+				box-shadow: 0.2rem 0 0 0 rgba(0, 0, 0, 0.15);
+			}
+		}
+
+		@media screen and #{$mediaMobile} {
+			display: none;
+		}
+	}
+
+	&__aside-header {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 4.5rem;
+	}
+
+	&__aside-menu {
+		flex: 1 1;
+	}
+
+	&__main {
+		flex: 1;
+		max-inline-size: calc(100vw - 27.5rem);
+		position: relative;
+
+		@media screen and #{$mediaTable} {
+			max-inline-size: 100vw;
+			overflow: hidden;
+		}
+
+		@media screen and #{$mediaMobile} {
+			padding-block-start: 6.2rem;
+			max-inline-size: 100vw;
+		}
+	}
+
+	&__main-header {
+		box-sizing: border-box;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+		display: flex;
+		height: 7.5rem;
+		padding: 2rem 3rem;
+
+		@media screen and #{$mediaMobile} {
+			display: none;
+		}
+
+		@media screen and #{$mediaTable} {
+			padding: 2rem 3rem 2rem 1rem;
+		}
+	}
+
+	&__main-button {
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		margin-right: 1rem;
+		display: none;
+
+		@media screen and #{$mediaTable} {
+			display: flex;
+		}
+	}
+
+	&__page-wrapper {
+		padding: 3rem;
+
+		@media screen and #{$mediaMobile} {
+			padding: 3.5rem 2rem;
+		}
+	}
+
+	&__footer {
+		margin-block-end: 1rem;
+		margin-block-start: auto;
+
+		@media screen and #{$mediaMobile} {
+			display: none;
+		}
+	}
+
+	&__menu {
+		display: none;
+
+		@media screen and #{$mediaMobile} {
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+			top: 6.2rem;
+			transform: translate3d(-27.5rem, 0, 0);
+			background-color: $layout-aside-background;
+			box-shadow: 0.2rem 0 0 0 rgba(0, 0, 0, 0.15);
+			box-sizing: border-box;
+			width: 27.3rem;
+			height: calc(100vh - 6.2rem);
+			overflow-x: hidden;
+			overflow-y: auto;
+			z-index: 1000;
+			transition: all 0.3s ease;
+		}
+
+		&--open {
+			transform: translate3d(0, 0, 0);
+		}
+	}
+
+	&__block {
+		display: none;
+		box-shadow: 0.2rem 0 0 0 rgba(0, 0, 0, 0.15);
+
+		@media screen and #{$mediaMobile} {
+			position: fixed;
+			background-color: #8b8b8b71;
+			top: 6.2rem;
+			height: calc(100vh - 6.2rem);
+			width: 100vw;
+			z-index: 999;
+			outline: none;
+		}
+
+		&--open {
+			@media screen and #{$mediaTable} {
+				display: flex;
+				position: fixed;
+				background-color: #8b8b8b71;
+				top: 7.5rem;
+				height: calc(100vh - 7.5rem);
+				width: 100vw;
+				z-index: 999;
+				outline: none;
+			}
+
+			@media screen and #{$mediaMobile} {
+				display: block;
+				top: 6.2rem;
+				height: calc(100vh - 6.2rem);
+			}
+		}
+	}
+
+	&__menu-footer {
+		margin-block-start: auto;
+	}
+
+	&__menu-user {
+		margin-block-start: auto;
+		margin-block-end: 7rem;
+		margin-inline-end: auto;
+		margin-inline-start: auto;
+		display: flex;
+		align-items: center;
+	}
+
+	&__footer-mobile {
+		margin-block-start: auto;
+		display: none;
+
+		@media screen and #{$mediaMobile} {
+			display: block;
+		}
+	}
+
+	&__notification {
+		z-index: 998;
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 50%;
+		transform: translate3d(calc(14rem - 50%), 9rem, 0);
+
+		@media screen and #{$mediaTable} {
+			transform: translate3d(-50%, 9rem, 0);
+		}
+
+		@media screen and #{$mediaMobile} {
+			margin-block-start: auto;
+			left: 2rem;
+			top: 10%;
+			transform: initial;
+		}
+	}
+}

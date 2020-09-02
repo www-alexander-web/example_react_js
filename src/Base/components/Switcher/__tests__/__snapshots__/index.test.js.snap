@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Switcher component should renders correctly 1`] = `"<div class=\\"switcher switcher--active\\"><label for=\\"test-switcher\\"><span class=\\"switcher__slider switcher__slider--active\\"></span> </label><input type=\\"checkbox\\" id=\\"test-switcher\\" name=\\"test-switcher\\" class=\\"switcher__input\\" checked=\\"\\"/></div>"`;

@@ -1,0 +1,34 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/_constants.scss';
+
+.accounts {
+
+  .account {
+    display: grid;
+    grid-template-areas: 'account' 'balances';
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-column-gap: 30px;
+  }
+
+  &__title {
+    display: block;
+
+    @include mobile-title;
+  }
+
+  &__navigation {
+    @include mobile-navigation;
+  }
+}
+
+
+@include forTablet {
+  .accounts {
+    .account {
+      grid-auto-flow: column;
+      grid-column-gap: 0;
+      grid-template-columns: minmax(100%, 100%);
+    }
+  }
+}

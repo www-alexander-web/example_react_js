@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Input component should renders correctly 1`] = `"<span class=\\"input text input--large\\" role=\\"presentation\\"><label for=\\"input\\" class=\\"\\">Label</label><input type=\\"text\\" id=\\"input\\" name=\\"input\\" value=\\"ssss\\" autoComplete=\\"off\\" min=\\"0\\" max=\\"10000\\" step=\\"1\\" class=\\"position\\"/></span>"`;
+
+exports[`The Input component should show password input value 1`] = `"<span class=\\"input text input--large\\" role=\\"presentation\\"><label for=\\"input\\" class=\\"\\">Label</label><input type=\\"text\\" id=\\"input\\" name=\\"input\\" value=\\"value\\" autoComplete=\\"off\\" min=\\"0\\" max=\\"10000\\" step=\\"1\\" class=\\"position\\"/><button type=\\"button\\" class=\\"input__eye-btn\\"><i class=\\"icon-eye-off\\"></i>Hide</button></span>"`;

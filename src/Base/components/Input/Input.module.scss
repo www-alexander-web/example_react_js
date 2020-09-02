@@ -1,0 +1,188 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/constants';
+@import '~@base/assets/styles/mixins';
+
+.title {
+	margin-bottom: -0.5rem;
+}
+
+.required {
+	@include required;
+}
+
+.input {
+	display: flex;
+	border: {
+		width: 1px;
+		style: solid;
+		color: $input-border;
+		radius: 4px;
+	}
+
+	box-sizing: border-box;
+	font-size: 1.4rem;
+	block-size: 5rem;
+
+	margin: {
+		block-start: 0.66em;
+	}
+
+	min-inline-size: 10rem;
+	max-inline-size: 100%;
+	padding: 0 1.6rem;
+	position: relative;
+
+	@media screen and #{$mediaMobile} {
+		min-inline-size: 10rem;
+		inline-size: 100%;
+	}
+
+	&--small {
+		block-size: 3.8rem;
+	}
+
+	input {
+		border: none;
+		font: inherit;
+		padding: 0;
+		inline-size: 100%;
+		filter: none;
+		margin: 0;
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		&:focus {
+			outline: none;
+			outline-offset: 0;
+		}
+
+		&:disabled {
+			background-color: initial;
+		}
+	}
+
+	input[type=number] {
+		-moz-appearance: textfield;
+	}
+
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus {
+		border: none;
+		font: inherit;
+		padding: 0;
+		inline-size: 100%;
+		-webkit-text-fill-color: inherit;
+		-webkit-box-shadow: 0 0 0 1000px $white inset;
+	}
+
+	label {
+		background-color: $white;
+		color: $input-second-text-color;
+		padding: 0 0.7rem;
+		position: absolute;
+		top: -0.66em;
+		left: 0.8rem;
+	}
+
+	&--error {
+		border-color: $danger;
+		z-index: 10;
+	}
+
+	&__field-wrapper {
+		flex-grow: 0;
+	}
+
+	&__eye-btn {
+		align-items: center;
+		background-color: unset;
+		background-image: none;
+		border-color: transparent;
+		border-width: 0;
+		color: $input-second-text-color;
+		cursor: pointer;
+		display: inline-flex;
+		flex-shrink: 0;
+		font: inherit;
+		inline-size: 7.5rem;
+
+		&:focus {
+			outline: none;
+		}
+
+		i {
+			font-size: 2rem;
+		}
+	}
+
+	&__error {
+		color: $danger;
+		background-color: $white;
+		font-size: 0.8em;
+		position: absolute;
+		bottom: -0.5rem;
+		right: 2rem;
+		padding: 0.24rem 0.4rem;
+	}
+
+	.position {
+		&--align--center {
+			text-align: center;
+		}
+
+		&--align--left {
+			text-align: left;
+		}
+	}
+
+	&__buttons-group {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		right: 0;
+		height: 100%;
+		visibility: hidden;
+
+		&__button {
+			border: {
+				left: 1px solid rgba(166, 173, 196, 0.4);
+				right: none;
+				top: none;
+				bottom: none;
+				radius: 0 4px 4px 0;
+			}
+
+			background: white;
+			cursor: pointer;
+			width: 3.5rem;
+			margin: 0;
+			padding: 0;
+			outline: 0;
+			flex: 1;
+			vertical-align: center;
+
+			&:first-child {
+				border-bottom: 1px solid rgba(166, 173, 196, 0.4);
+			}
+
+			&__icon {
+				font-size: 10px;
+			}
+		}
+
+		button:focus {
+			outline: none;
+		}
+	}
+
+	&:hover {
+		.input__buttons-group {
+			visibility: visible;
+		}
+	}
+}

@@ -1,0 +1,75 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/extenders';
+@import '~@base/assets/styles/constants';
+
+.notification {
+	inline-size: 100%;
+
+	&__item {
+		display: flex;
+		inline-size: 42rem;
+		font-weight: 500;
+		font-size: 1.4rem;
+		line-height: 1.7rem;
+		border-radius: 0.4rem;
+		align-items: center;
+
+		padding: {
+			inline-start: 1.5rem;
+			inline-end: 0.8rem;
+			block-start: 0.6rem;
+			block-end: 0.6rem;
+		}
+
+		@media screen and #{$mediaMobile} {
+			padding: {
+				inline-end: 1.5rem;
+			}
+
+			inline-size: calc(100vw - 7rem);
+			max-inline-size: 100%;
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	&__button {
+		@extend %default-button;
+
+		background-color: white;
+		color: #5a606a;
+		inline-size: 9rem;
+		block-size: 2.4rem;
+		font-weight: 500;
+		font-size: 1.4rem;
+		line-height: 1.7rem;
+		border-radius: 0.4rem;
+		margin-inline-start: auto;
+
+		@media screen and #{$mediaMobile} {
+			inline-size: 100%;
+			text-align: center;
+		}
+	}
+
+	&--them-error {
+		.notification__item {
+			background-color: rgb(255 238 239);
+			color: rgb(254, 83, 93);
+		}
+	}
+
+	&--them-success {
+		.notification__item {
+			background-color: rgb(236 246 238);
+			color: rgb(39, 174, 96);
+		}
+	}
+
+	&--them-normal {
+		.notification__item {
+			background-color: rgba(155, 155, 155, 0.1);
+			color: rgb(90, 96, 106);
+		}
+	}
+}

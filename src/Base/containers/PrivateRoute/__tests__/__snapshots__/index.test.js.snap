@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The PrivateRoutes component ConnectedRoute renders correctly 1`] = `""`;
+
+exports[`The PrivateRoutes component PrivateRoute renders correctly 1`] = `"<span>Hello Page1!</span>"`;
+
+exports[`The PrivateRoutes component should redirect to Page2 1`] = `""`;

@@ -1,0 +1,105 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/extenders';
+
+.text {
+	@extend %default-text-style;
+
+	// headers
+
+	&--type--h1 {
+		display: block;
+		font-size: 3rem;
+		font-weight: 500;
+
+		@media screen and (max-width: 375px) {
+			// TODO: refactor to breakpoints constants
+			font-size: 2.4rem;
+		}
+	}
+
+	&--type--h1-extra {
+		display: block;
+		font-size: 4.8rem;
+		font-weight: 500;
+	}
+
+	&--type--h2-extra {
+		display: block;
+		font-size: 3.6rem;
+		font-weight: 500;
+	}
+
+	&--type--h2 {
+		display: block;
+		font-size: 2.4rem;
+		font-weight: 500;
+	}
+
+	&--type--h3 {
+		display: block;
+		font-size: 1.8rem;
+		font-weight: 500;
+	}
+
+	&--type--h4 {
+		display: block;
+		font-size: 1.4rem;
+		font-weight: 500;
+	}
+
+	&--type--h5 {
+		display: block;
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+
+	&--type--h6 {
+		display: block;
+		font-size: 1rem;
+		font-weight: 500;
+	}
+
+	// aligns
+
+	&--align--left {
+		text-align: left;
+	}
+
+	&--align--center {
+		text-align: center;
+	}
+
+	&--align--right {
+		text-align: right;
+	}
+
+	// colors
+
+	&--color--white {
+		color: $text-white;
+	}
+
+	&--color--gray {
+		color: $text-gray;
+	}
+
+	&--color--gray-light {
+		color: $text-gray-light;
+	}
+
+	&--color--gray-dark {
+		color: $text-gray-dark;
+	}
+
+	&--color--black {
+		color: $text-black;
+	}
+
+	&--color--primary {
+		color: $text-primary;
+	}
+
+	&--color--green {
+		color: $text-label-green;
+	}
+}

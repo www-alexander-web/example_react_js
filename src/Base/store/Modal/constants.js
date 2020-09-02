@@ -1,0 +1,4 @@
+// @flow
+
+export const BASE_MODAL_OPEN: 'BASE_MODAL_OPEN' = 'BASE_MODAL_OPEN';
+export const BASE_MODAL_CLOSE: 'BASE_MODAL_CLOSE' = 'BASE_MODAL_CLOSE';

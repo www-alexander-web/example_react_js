@@ -1,0 +1,189 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/extenders';
+@import '~@base/assets/styles/constants';
+
+.tabs {
+	display: flex;
+	inline-size: 100%;
+	outline: none;
+
+	&__box {
+		display: flex;
+		inline-size: 100%;
+		justify-content: center;
+		border-bottom: 1px solid $tabs-border;
+	}
+
+	&__item {
+		min-inline-size: 11rem;
+		text-align: center;
+
+		@media screen and #{$mediaMobile} {
+			min-inline-size: initial;
+		}
+	}
+
+	&__link {
+		@extend %default-text-style;
+
+		color: $tabs-primary;
+		text-decoration: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		min-block-size: 4.8rem;
+		font-size: 1.6rem;
+		transition: all 0.3s ease;
+
+		&:hover {
+			color: $tabs-active;
+		}
+	}
+
+	&__link-text {
+		display: flex;
+		inline-size: 100%;
+		block-size: 100%;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex: 1;
+	}
+
+	&__border {
+		margin-block-start: auto;
+		inline-size: calc(100% - 1rem);
+		border-block-end: 0.3rem solid $tabs-select-primary;
+		block-size: 0;
+		transition: all 0.3s ease;
+	}
+
+	&__button {
+		@extend %default-button;
+
+		outline: none;
+		font-size: 1.2rem;
+		letter-spacing: 1px;
+		block-size: 4.8rem;
+		text-transform: uppercase;
+		color: $tabs-select-primary;
+		display: none;
+		inline-size: 100%;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		.tabs__border {
+			inline-size: calc(100vw - 5rem);
+			max-inline-size: 100%;
+		}
+
+		@media screen and #{$mediaMobile} {
+			display: flex;
+		}
+	}
+
+	&__button-icon {
+		position: absolute;
+		transform: translate3d(calc(50vw - 4rem), 0, 0);
+
+		& > i {
+			font-size: 180%;
+		}
+	}
+
+	&--theme--navigate {
+		.tabs__link {
+			border-radius: 6px 6px 0 0;
+			border: 1px solid $tabs-border-default;
+			border-bottom: 0;
+			min-inline-size: 5rem;
+			padding-inline-end: 2rem;
+			padding-inline-start: 2rem;
+
+			&--active {
+				border-color: $tabs-border;
+				color: $tabs-active;
+			}
+		}
+
+		.tabs__item {
+			@media screen and #{$mediaMobile} {
+				flex: 1;
+			}
+		}
+	}
+
+	&--theme--select {
+		@media screen and #{$mediaMobile}, #{$mediaMedium} {
+			position: relative;
+			inline-size: 100%;
+		}
+
+		.tabs__box {
+			@media screen and #{$mediaMobile} {
+				margin-block-start: 5.1rem;
+				position: absolute;
+				z-index: 100;
+				inline-size: 100%;
+				display: none;
+				flex-direction: column;
+				outline: none;
+				background-color: $select-menu-background;
+				border-radius: 6px;
+				overflow-x: hidden;
+				border: 1px solid $select-border;
+				max-block-size: 34rem;
+			}
+
+			&--open {
+				@media screen and #{$mediaMobile} {
+					display: flex;
+				}
+			}
+		}
+
+		.tabs__item {
+			min-inline-size: 20rem;
+
+			@media screen and #{$mediaMedium} {
+				min-inline-size: 16rem;
+			}
+		}
+
+		.tabs__border {
+			border-color: $tabs-border-default;
+		}
+
+		.tabs__link {
+			font-size: 1.2rem;
+			letter-spacing: 1px;
+			display: flex;
+			inline-size: 100%;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			block-size: 100%;
+			text-transform: uppercase;
+
+			&:hover {
+				color: $tabs-active;
+			}
+
+			&--active {
+				color: $tabs-select-primary;
+
+				.tabs__border {
+					border-color: $tabs-select-primary;
+				}
+			}
+		}
+
+		.tabs__button {
+			.tabs__border {
+				border-color: $tabs-select-primary;
+			}
+		}
+	}
+}

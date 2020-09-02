@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The SelectMulti component should renders correctly 1`] = `"<div class=\\"select-multi\\"><span class=\\"text text--type--h5 text--align--left text--color--gray select-multi__label\\">title</span><div role=\\"button\\" class=\\"select-multi__wrapper\\" tabindex=\\"0\\"><div class=\\"select-multi__input select-multi__input--border--dashed\\" tabindex=\\"-1\\" role=\\"button\\"><input class=\\"select-multi__input-search select-multi__input-search--flex\\" value=\\"\\" name=\\"select\\"/><div class=\\"select-multi__icon\\"><i class=\\"icon-down-open\\"></i></div></div><div class=\\"select-multi__box\\"></div></div></div>"`;

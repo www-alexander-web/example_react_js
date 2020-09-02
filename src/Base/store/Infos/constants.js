@@ -1,0 +1,7 @@
+// @flow
+
+export const INFOS_REQUEST: 'INFOS_REQUEST' = 'INFOS_REQUEST';
+export const INFOS_SUCCESS: 'INFOS_SUCCESS' = 'INFOS_SUCCESS';
+export const INFOS_FAIL: 'INFOS_FAIL' = 'INFOS_FAIL';
+
+export const INFOS_META: 'INFOS_META' = 'INFOS_META';

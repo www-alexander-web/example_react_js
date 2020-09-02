@@ -1,0 +1,218 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/extenders';
+@import '~@base/assets/styles/constants';
+
+.table {
+	transition: all 0.3s ease;
+
+	&__box {
+		inline-size: 100%;
+		overflow-x: auto;
+
+		@media screen and #{$mediaMobile} {
+			overflow-x: auto;
+			max-inline-size: 100%;
+		}
+	}
+
+	&__content {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		grid-template-rows: minmax(3.5rem, max-content);
+		grid-auto-rows: minmax(7rem, max-content);
+		inline-size: 100%;
+		border-collapse: separate;
+		border-spacing: 0 0.5rem;
+		margin-block-start: 1rem;
+		margin-block-end: 1rem;
+
+		&--default {
+			display: grid;
+			grid-template-columns: repeat(3, auto);
+			grid-template-rows: minmax(3.5rem, max-content);
+			grid-auto-rows: minmax(7rem, max-content);
+			inline-size: 100%;
+			border-collapse: separate;
+			border-spacing: 0 0.5rem;
+			margin-block-start: 1rem;
+			margin-block-end: 0rem;
+		}
+	}
+
+	&__head-item {
+		max-inline-size: 100%;
+		min-block-size: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-transform: uppercase;
+		color: $table-head;
+		padding-inline-end: 0.3rem;
+		padding-inline-start: 0.3rem;
+	}
+
+	&__head-text {
+		font-weight: 600;
+		font-size: 1rem;
+		line-height: 1.2rem;
+		letter-spacing: 0.07em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		block-size: 100%;
+		grid-area: header;
+
+		@media screen and #{$mediaMobile} {
+			white-space: nowrap;
+		}
+	}
+
+	&__button-box {
+		@extend %default-button;
+
+		inline-size: 100%;
+		display: grid;
+		grid-template-areas: '. header up' '. header down';
+		grid-template-columns: 1fr max-content 1fr;
+		grid-template-rows: 1fr 1fr;
+		color: $table-head;
+		outline: none;
+		text-transform: uppercase;
+
+		&::-moz-focus-inner {
+			border: 0;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__button {
+		@extend %default-button;
+
+		inline-size: 2rem;
+		block-size: 1.5rem;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		outline: none;
+		fill: $table-head;
+		transition: all 0.3s ease;
+		grid-area: up;
+
+		&::-moz-focus-inner {
+			border: 0;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover,
+		&:focus {
+			fill: $table-text;
+		}
+
+		&:last-child {
+			align-items: flex-start;
+			grid-area: down;
+		}
+
+		&--active {
+			fill: $table-text;
+		}
+	}
+
+	&__item {
+		background-color: $table-background;
+		border-block-start: 0.5px solid $table-border;
+		border-block-end: 0.5px solid $table-border;
+		padding-block-end: 0.5rem;
+		padding-block-start: 0.5rem;
+		padding-inline-end: 0.3rem;
+		padding-inline-start: 0.3rem;
+		color: $table-text;
+		outline: none;
+		margin-block-start: 0.5rem;
+		transition: all 0.3s ease;
+
+		&::-moz-focus-inner {
+			border: 0;
+		}
+
+		&:focus {
+			outline: none;
+		}
+
+		&--first {
+			border-inline-start: 0.5px solid $table-border;
+			border-radius: 4px 0 0 4px;
+		}
+
+		&--last {
+			border-inline-end: 0.5px solid $table-border;
+			border-radius: 0 4px 4px 0;
+		}
+
+		&--external {
+			border: 0;
+			border-radius: 0 4px 4px 0;
+		}
+
+		&--click {
+			cursor: pointer;
+		}
+
+		&--second {
+			margin-block-start: 0;
+			background-color: rgba(196, 196, 196, 0.1);
+			border: 0;
+		}
+
+		&--active {
+			background-color: $table-background-active;
+			//border-color: $table-background-active;
+			//background-color: $table-background-active;
+			//color: $table-text-active;
+		}
+
+		&--disable {
+			opacity: 0.3;
+			cursor: default;
+		}
+	}
+
+	&__item-content {
+		display: flex;
+		block-size: 100%;
+		font-size: 1.3rem;
+		max-inline-size: 100%;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		min-block-size: 5.8rem;
+
+		@media screen and #{$mediaMobile} {
+			white-space: nowrap;
+		}
+	}
+
+	&__default {
+		display: flex;
+		inline-size: 100%;
+		justify-content: center;
+		align-items: center;
+		block-size: 32rem;
+		box-sizing: border-box;
+		border: 0.05rem solid $table-border;
+		border-radius: 0.4rem;
+	}
+
+  	&__pagination {
+	  	padding-top: 50px;
+		display: flex;
+		justify-content: center;
+  	}
+}

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Checkbox component should renders correctly 1`] = `"<span class=\\"checkbox\\"><label for=\\"checkbox\\" class=\\"checkbox__cursor\\"><span class=\\"checkbox__box\\"></span>Checkbox label</label><input type=\\"checkbox\\" id=\\"checkbox\\" name=\\"checkbox\\"/></span>"`;

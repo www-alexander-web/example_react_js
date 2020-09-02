@@ -1,0 +1,57 @@
+@import '~@base/assets/styles/colors';
+@import '~@base/assets/styles/constants.scss';
+
+.modal-window {
+	position: absolute;
+	inline-size: 100%;
+	block-size: calc(100% - 7.5rem);
+	top: 7.5rem;
+	right: 0;
+	outline: none;
+	z-index: 997;
+
+	@media screen and #{$mediaMobile} {
+		position: fixed;
+		inline-size: 100vw;
+		block-size: 100vh;
+		top: 0;
+	}
+
+	&__box {
+		inline-size: 100%;
+		block-size: 100%;
+		background: rgba(40, 40, 48, 0.5);
+		backdrop-filter: blur(15px);
+		outline: none;
+	}
+
+	&__content {
+		right: 50%;
+		bottom: 100%;
+		padding: 3rem 3rem 0;
+		position: fixed;
+		background-color: #fff;
+		border-radius: 0.8rem;
+		transform: translate3d(calc(50% + 15rem), calc(100% + 8rem), 0);
+		overflow: auto;
+		max-inline-size: calc(100vw - 2rem);
+		max-block-size: calc(100vh - 17.75rem);
+
+		@media screen and #{$mediaTable} {
+			transform: translate3d(50%, calc(100% + 8rem), 0);
+		}
+
+		@media screen and #{$mediaMobile} {
+			padding: 2rem;
+			max-block-size: calc(100vh - 14rem);
+			transform: translate3d(50%, calc(100% + 7rem), 0);
+		}
+
+		&::after{
+			content: "";
+			opacity: 0;
+			height: 3rem;
+			display: block;
+		}
+	}
+}

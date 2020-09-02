@@ -1,0 +1,52 @@
+// @flow
+
+import * as {{ camelCase name }}Types from '{{ routes }}/store/{{ properCase name}}/constants';
+import type { {{ properCase name }}Actions } from '{{ routes }}/store/{{ properCase name}}/types';
+
+export type {{ properCase name }}State = {|
+isOk: boolean,
+isLoading: boolean,
+error: string | null,
+|};
+
+export type {{ properCase name }}ActionsType = {{ properCase name }}Actions;
+
+const initialState: {{ properCase name }}State = {
+isOk: false,
+isLoading: false,
+error: null,
+};
+
+export default (
+state: {{ properCase name }}State = initialState,
+action: {{ properCase name }}ActionsType,
+): {{ properCase name }}State => {
+switch (action.type) {
+case {{camelCase name}}Types.{{ reducer }}_{{constantCase name}}_REQUEST: {
+return {
+...state,
+isLoading: true,
+};
+}
+
+case {{camelCase name}}Types.{{ reducer }}_{{constantCase name}}_SUCCESS: {
+const { payload } = action;
+return {
+...state,
+isOk: payload,
+};
+}
+
+case {{camelCase name}}Types.{{ reducer }}_{{constantCase name}}_FAIL: {
+const { payload } = action;
+return {
+...state,
+...payload,
+};
+}
+
+default: {
+return state;
+}
+}
+};
